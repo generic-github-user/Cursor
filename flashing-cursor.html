@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Flashing Cursor
+		</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+	</head>
+	<body style="user-select: none;">
+		<div id="div">
+		<h1 style="font-family: 'Lato', sans-serif; font-size: 500%; font-weight: lighter; text-align: center; vertical-align: middle; line-height: 600px;">You might want to get that checked out...</h1>
+		</div>
+		
+		<script type="text/javascript">
+		
+			//List of cursor types based on list at "https://stackoverflow.com/questions/3087975/how-can-i-make-the-cursor-a-hand-when-a-user-hovers-over-a-list-item"
+			const cursorTypes = ["default", "none", "context-menu", "help", "pointer", "progress", "wait", "cell", "crosshair", "text", "vertical-text", "alias", "copy", "move", "no-drop", "not-allowed", "all-scroll", "col-resize", "row-resize"];
+			
+			function changeCursor(){
+				document.getElementById("div").style += "width: 95vw; height: 90vh; cursor: "+cursorTypes[Math.floor(Math.random()*cursorTypes.length)]+";";
+			}
+			
+			setInterval(changeCursor, 100);
+		
+		</script>
+	</body>
+</html>
